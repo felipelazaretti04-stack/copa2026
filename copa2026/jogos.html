@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogos - Copa do Mundo 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🏆 Rumo ao Hexa</h1>
+    <p>Tudo sobre a Copa do Mundo de 2026 - Estados Unidos, México e Canadá</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="selecoes.html">Seleções</a></li>
+      <li><a href="jogos.html" class="ativo">Jogos</a></li>
+      <li><a href="curiosidades.html">Curiosidades</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Tabela com as datas principais do torneio -->
+    <section class="tabela-jogos">
+      <h2>Datas principais do torneio</h2>
+      <table>
+        <caption>Principais datas - Copa do Mundo 2026</caption>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Evento</th>
+            <th>Local</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11/06/2026</td>
+            <td>Jogo de abertura da Copa</td>
+            <td>Estádio Azteca - Cidade do México</td>
+          </tr>
+          <tr>
+            <td>13/06/2026 - 16h (Brasília)</td>
+            <td>Brasil x Marrocos - Grupo C</td>
+            <td>Costa leste dos Estados Unidos</td>
+          </tr>
+          <tr>
+            <td>19/07/2026</td>
+            <td>Final da Copa do Mundo</td>
+            <td>MetLife Stadium - Nova Jersey (EUA)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        A fase de grupos garante vaga no mata-mata para os dois primeiros colocados de
+        cada grupo, além dos oito melhores terceiros lugares - chegando a 32 seleções
+        na fase eliminatória.
+      </p>
+    </section>
+
+    <!-- Formulário simples: o usuário "monta" o palpite dele -->
+    <section class="bolao-section">
+      <h2>Monte seu bolão: Brasil x Marrocos</h2>
+      <p>Dá o seu palpite pra estreia do Brasil na Copa! (é só um formulário de exemplo, não envia pra lugar nenhum)</p>
+
+      <!-- onsubmit="return false" evita que a página recarregue ao enviar,
+           já que não temos um servidor para receber esses dados -->
+      <form class="bolao" onsubmit="return false;">
+
+        <label for="nome">Seu nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+        <label for="campea">Quem você acha que vai ser a campeã da Copa?</label>
+        <select id="campea" name="campea">
+          <option value="brasil">Brasil</option>
+          <option value="argentina">Argentina</option>
+          <option value="franca">França</option>
+          <option value="espanha">Espanha</option>
+          <option value="inglaterra">Inglaterra</option>
+          <option value="outra">Outra seleção</option>
+        </select>
+
+        <label>Seu palpite de placar para Brasil x Marrocos:</label>
+        <div class="placar">
+          <input type="number" min="0" max="20" name="golsBrasil" aria-label="Gols do Brasil" required>
+          <span>x</span>
+          <input type="number" min="0" max="20" name="golsMarrocos" aria-label="Gols do Marrocos" required>
+        </div>
+
+        <label for="comentario">Comentário (opcional):</label>
+        <textarea id="comentario" name="comentario" rows="3" placeholder="Deixe seu palpite ou torcida aqui..."></textarea>
+
+        <button type="submit">Enviar palpite</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Trabalho acadêmico - Desenvolvimento Web I &middot; Conteúdo informativo, sem fins comerciais</p>
+  </footer>
+
+</body>
+</html>

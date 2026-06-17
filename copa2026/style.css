@@ -1,0 +1,246 @@
+/* =========================================================
+   style.css
+   Estilo principal do site "Rumo ao Hexa - Copa do Mundo 2026"
+   Usado nas páginas: index.html, selecoes.html e jogos.html
+   (a página curiosidades.html usa Bootstrap e tem seu próprio estilo)
+   ========================================================= */
+
+/* Reset bem simples, só pra tirar a margem padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===================== CABEÇALHO ===================== */
+/* Fundo em gradiente (verde para azul), uma das cores da Copa */
+header {
+  background: linear-gradient(135deg, #1a8754, #0d3b66);
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ===================== MENU DE NAVEGAÇÃO ===================== */
+nav {
+  background-color: #0d3b66;
+  border-top: 2px solid #1a8754;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse por cima do link */
+nav ul li a:hover {
+  background-color: #1a8754;
+}
+
+/* Marca a página em que o usuário está */
+nav ul li a.ativo {
+  background-color: #ffcc29;
+  color: #0d3b66;
+  font-weight: bold;
+}
+
+/* ===================== CONTEÚDO PRINCIPAL ===================== */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-left: 6px solid #1a8754;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #0d3b66;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #ffcc29;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+/* Imagem de destaque (banner) */
+.banner {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 8px;
+  border: 3px solid #ffcc29;
+}
+
+/* Caixa que centraliza o vídeo do youtube */
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.video-wrapper iframe {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Bandeirinhas dos países-sede */
+.bandeiras {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.bandeiras figure {
+  text-align: center;
+}
+
+.bandeiras img {
+  width: 120px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.bandeiras figcaption {
+  margin-top: 6px;
+  font-weight: bold;
+  color: #0d3b66;
+}
+
+/* ===================== TABELAS ===================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table caption {
+  text-align: left;
+  font-style: italic;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #0d3b66;
+  color: #fff;
+}
+
+/* Linhas pares com fundo levemente cinza, fica mais fácil de ler */
+tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+tr:hover {
+  background-color: #eaf6ee;
+}
+
+/* ===================== FORMULÁRIO (bolão) ===================== */
+.bolao {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+}
+
+.bolao label {
+  font-weight: bold;
+  color: #0d3b66;
+}
+
+.bolao input,
+.bolao select,
+.bolao textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.placar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.placar input {
+  width: 70px;
+}
+
+.bolao button {
+  background-color: #1a8754;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.bolao button:hover {
+  background-color: #0d3b66;
+}
+
+/* ===================== LINKS DENTRO DO TEXTO ===================== */
+a.link-externo {
+  color: #0d3b66;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a.link-externo:hover {
+  color: #1a8754;
+}
+
+/* ===================== RODAPÉ ===================== */
+footer {
+  background-color: #0d3b66;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.85rem;
+}
