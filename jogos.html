@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jogos - Copa do Mundo 2026</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -63,8 +63,8 @@
 
     <!-- Formulário simples: o usuário "monta" o palpite dele -->
     <section class="bolao-section">
-      <h2>Monte seu bolão: Brasil x Marrocos</h2>
-      <p>Dá o seu palpite pra estreia do Brasil na Copa!</p>
+      <h2>Monte seu bolão: Final da Copa do Mundo</h2>
+      <p>Dá o seu palpite pra final da Copa!</p>
 
       <!-- onsubmit="return false" evita que a página recarregue ao enviar,
            já que não temos um servidor para receber esses dados -->
@@ -74,20 +74,25 @@
         <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
         <label for="campea">Quem você acha que vai ser a campeã da Copa?</label>
-        <select id="campea" name="campea">
+        <select id="campea" name="campea" required>
           <option value="brasil">Brasil</option>
+          <option value="gremio">Grêmio</option>
           <option value="argentina">Argentina</option>
           <option value="franca">França</option>
           <option value="espanha">Espanha</option>
           <option value="inglaterra">Inglaterra</option>
+          <option value="alemanha">Alemanha</option>
+          <option value="italia">Itália</option>
+          <option value="holanda">Holanda</option>
+          <option value="portugal">Portugal</option>
           <option value="outra">Outra seleção</option>
         </select>
 
-        <label>Seu palpite de placar para Brasil x Marrocos:</label>
+        <label>Seu palpite de placar para Final da Copa:</label>
         <div class="placar">
-          <input type="number" min="0" max="20" name="golsBrasil" aria-label="Gols do Brasil" required>
+          <input type="number" min="0" max="20" name="golsTimeA" aria-label="Gols do Time A" required>
           <span>x</span>
-          <input type="number" min="0" max="20" name="golsMarrocos" aria-label="Gols do Marrocos" required>
+          <input type="number" min="0" max="20" name="golsTimeB" aria-label="Gols do Time B" required>
         </div>
 
         <label for="comentario">Comentário (opcional):</label>

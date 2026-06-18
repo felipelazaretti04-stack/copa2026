@@ -5,6 +5,20 @@
    (a página curiosidades.html usa Bootstrap e tem seu próprio estilo)
    ========================================================= */
 
+/* =====================================================
+   VARIÁVEIS CSS (custom properties)
+   Aqui ficam as cores principais do site, declaradas uma
+   única vez. Em vez de escrever #3CAC3B em 6 lugares
+   diferentes, escrevo var(--verde-brasil) e se eu quiser
+   trocar a cor, mudo só aqui em cima.
+   ===================================================== */
+:root {
+  --verde-brasil: #3CAC3B;
+  --azul-brasil: #002776;
+  --amarelo-brasil: #ffcc29;
+  --branco: #ffffff;
+}
+
 /* Reset bem simples, só pra tirar a margem padrão do navegador */
 * {
   margin: 0;
@@ -20,10 +34,10 @@ body {
 }
 
 /* ===================== CABEÇALHO ===================== */
-/* Fundo em gradiente (verde para azul), uma das cores da Copa */
+/* Fundo em gradiente (verde para azul), cores do Brasil */
 header {
-  background: linear-gradient(135deg, #1a8754, #0d3b66);
-  color: #fff;
+  background: linear-gradient(135deg, var(--verde-brasil), var(--azul-brasil));
+  color: var(--branco);
   text-align: center;
   padding: 30px 20px;
 }
@@ -40,8 +54,8 @@ header p {
 
 /* ===================== MENU DE NAVEGAÇÃO ===================== */
 nav {
-  background-color: #0d3b66;
-  border-top: 2px solid #1a8754;
+  background-color: var(--azul-brasil);
+  border-top: 2px solid var(--verde-brasil);
 }
 
 nav ul {
@@ -53,7 +67,7 @@ nav ul {
 
 nav ul li a {
   display: block;
-  color: #fff;
+  color: var(--branco);
   text-decoration: none;
   padding: 14px 20px;
   transition: background-color 0.3s ease;
@@ -61,13 +75,13 @@ nav ul li a {
 
 /* Efeito ao passar o mouse por cima do link */
 nav ul li a:hover {
-  background-color: #1a8754;
+  background-color: var(--verde-brasil);
 }
 
 /* Marca a página em que o usuário está */
 nav ul li a.ativo {
-  background-color: #ffcc29;
-  color: #0d3b66;
+  background-color: var(--amarelo-brasil);
+  color: var(--azul-brasil);
   font-weight: bold;
 }
 
@@ -79,9 +93,9 @@ main {
 }
 
 section {
-  background-color: #fff;
+  background-color: var(--branco);
   border: 1px solid #ddd;
-  border-left: 6px solid #1a8754;
+  border-left: 6px solid var(--verde-brasil);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 25px;
@@ -89,21 +103,21 @@ section {
 }
 
 section h2 {
-  color: #0d3b66;
+  color: var(--azul-brasil);
   margin-bottom: 12px;
-  border-bottom: 2px solid #ffcc29;
+  border-bottom: 2px solid var(--amarelo-brasil);
   display: inline-block;
   padding-bottom: 4px;
 }
 
-/* Imagem de destaque (banner) */
+/* Imagem de destaque (banner da Copa) */
 .banner {
   width: 100%;
   max-width: 700px;
   display: block;
   margin: 15px auto;
   border-radius: 8px;
-  border: 3px solid #ffcc29;
+  border: 3px solid var(--amarelo-brasil);
 }
 
 /* Caixa que centraliza o vídeo do youtube */
@@ -122,6 +136,7 @@ section h2 {
 .bandeiras {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 25px;
   flex-wrap: wrap;
   margin-top: 15px;
@@ -133,6 +148,8 @@ section h2 {
 
 .bandeiras img {
   width: 120px;
+  height: 80px;
+  object-fit: cover;
   border: 2px solid #ccc;
   border-radius: 4px;
 }
@@ -140,7 +157,7 @@ section h2 {
 .bandeiras figcaption {
   margin-top: 6px;
   font-weight: bold;
-  color: #0d3b66;
+  color: var(--azul-brasil);
 }
 
 /* ===================== TABELAS ===================== */
@@ -164,8 +181,8 @@ th, td {
 }
 
 th {
-  background-color: #0d3b66;
-  color: #fff;
+  background-color: var(--azul-brasil);
+  color: var(--branco);
 }
 
 /* Linhas pares com fundo levemente cinza, fica mais fácil de ler */
@@ -187,7 +204,7 @@ tr:hover {
 
 .bolao label {
   font-weight: bold;
-  color: #0d3b66;
+  color: var(--azul-brasil);
 }
 
 .bolao input,
@@ -210,8 +227,8 @@ tr:hover {
 }
 
 .bolao button {
-  background-color: #1a8754;
-  color: #fff;
+  background-color: var(--verde-brasil);
+  color: var(--branco);
   border: none;
   padding: 10px 18px;
   border-radius: 4px;
@@ -222,24 +239,24 @@ tr:hover {
 }
 
 .bolao button:hover {
-  background-color: #0d3b66;
+  background-color: var(--azul-brasil);
 }
 
 /* ===================== LINKS DENTRO DO TEXTO ===================== */
 a.link-externo {
-  color: #0d3b66;
+  color: var(--azul-brasil);
   font-weight: bold;
   text-decoration: underline;
 }
 
 a.link-externo:hover {
-  color: #1a8754;
+  color: var(--verde-brasil);
 }
 
 /* ===================== RODAPÉ ===================== */
 footer {
-  background-color: #0d3b66;
-  color: #fff;
+  background-color: var(--azul-brasil);
+  color: var(--branco);
   text-align: center;
   padding: 15px;
   font-size: 0.85rem;
